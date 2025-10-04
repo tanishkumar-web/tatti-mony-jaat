@@ -1,0 +1,46 @@
+# Component definition for Telegram Bot
+name: telegram-bot
+type: web
+version: 0.1.0
+
+# Docker build configuration
+build:
+  context: .
+  dockerfile: Dockerfile
+
+# Runtime configuration
+run:
+  cmd: python bot.py
+  envVars:
+    - name: PYTHONPATH
+      value: .
+
+# Health check configuration
+healthCheck:
+  path: /healthz
+  port: 8080
+  protocol: HTTP
+
+# Resource allocation
+resources:
+  memory: 512Mi
+  cpu: 250m
+
+# Ports configuration
+ports:
+  - name: http
+    port: 8080
+    protocol: HTTP
+    targetPort: 8080
+
+# Environment variables
+env:
+  - name: BOT_TOKEN
+    description: "Telegram Bot Token"
+    required: true
+  - name: ADMIN_IDS
+    description: "Comma-separated list of admin user IDs"
+    required: true
+  - name: UPI_ID
+    description: "UPI ID for payments"
+    required: true
