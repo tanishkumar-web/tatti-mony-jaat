@@ -1,0 +1,75 @@
+# 🤖 Telegram Bot - Essential Files & Hosting Guide
+
+## 📋 Essential Files to Keep
+
+These are the files you MUST keep for your bot to work properly:
+
+1. bot.py - Main bot application
+2. config.py - Configuration settings
+3. requirements.txt - Python dependencies
+4. database.py - Database operations
+5. admin.py - Admin dashboard functionality
+6. ai.py - AI and search functionality
+7. ddg_search.py - DuckDuckGo search implementation
+8. payments.py - Payment processing
+9. games.py - Mini-games
+10. quotes.py - Quote functionality
+11. utils.py - Utility functions
+12. bot_data.db - Database file (contains user data and payments)
+
+## 🗑️ Files You Can Delete
+
+These files are not essential and can be safely removed:
+
+- CHANGELOG.md
+- FEATURES_SUMMARY.md
+- README.md
+- SUMMARY.md
+- bot_backup.py
+- button_test.py
+- exa_ai.py
+- final_summary.md
+- simple_search.py
+- test_bot.py
+- __pycache__/ directory
+- temp/ directory
+- proofs/ directory
+
+## ☁️ Free 24/7 Hosting Options
+
+### Option 1: Render (Recommended)
+1. Create a free account at https://render.com
+2. Create a new "Web Service"
+3. Upload your essential files
+4. Set these configurations:
+   - Runtime: Python 3
+   - Build command: pip install -r requirements.txt
+   - Start command: python bot.py
+
+### Option 2: PythonAnywhere
+1. Create a free account at https://pythonanywhere.com
+2. Upload your essential files
+3. Create a new web app with Python 3.x
+4. Install requirements: pip install -r requirements.txt --user
+5. Configure the app to run bot.py
+
+### Option 3: Railway
+1. Create a free account at https://railway.app
+2. Create a new project
+3. Upload your essential files
+4. Add a Procfile with: worker: python bot.py
+
+## ▶️ Running Your Bot Locally
+
+1. Install dependencies:
+   pip install -r requirements.txt
+
+2. Run the bot:
+   python bot.py
+
+## ⚠️ Important Notes
+
+1. Keep your bot_data.db file safe - it contains all user data
+2. Update config.py with your actual bot token and admin IDs
+3. Make sure all essential files are in the same directory
+4. The bot needs internet access to work properly

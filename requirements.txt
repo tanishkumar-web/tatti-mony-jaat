@@ -1,0 +1,24 @@
+python-telegram-bot==20.3
+qrcode
+Pillow
+aiohttp
+requests
+pytesseract
+opencv-python
+numpy
+exa-py
+python-dotenv
+# Additional libraries for enhanced bot capabilities
+easyocr
+transformers
+torch
+tensorflow
+gTTS
+SpeechRecognition
+pdfplumber
+PyPDF2
+python-docx
+beautifulsoup4
+pandas
+fastapi
+flask
